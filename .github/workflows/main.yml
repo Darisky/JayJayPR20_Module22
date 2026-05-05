@@ -37,7 +37,6 @@ jobs:
         path: reports
 
   deploy-report:
-      needs: build
       if: always()
       runs-on: ubuntu-latest
       permissions:
