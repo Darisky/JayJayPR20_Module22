@@ -27,7 +27,7 @@ jobs:
       run: chmod +x gradlew 
       
     - name: Execute Test
-      run: ./gradlew cucumber
+      run: ./gradlew build
 
     - name: Archive Test Result
       uses: actions/upload-artifact@v7
@@ -38,7 +38,7 @@ jobs:
 
     - name: Deploy report to Github Pages
       if: always()
-      uses: actions/configure-pages@v6.0.0
+      uses: actions/deploy-pages@v4
       with:
         static_site_generator : nuxt
         token: ${{ secrets.GITHUB_TOKEN }}
