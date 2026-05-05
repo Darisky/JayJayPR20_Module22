@@ -40,7 +40,5 @@ jobs:
       if: always()
       uses: actions/deploy-pages@v4
       with:
-        static_site_generator : nuxt
         token: ${{ secrets.GITHUB_TOKEN }}
-        generator_config_file: reports
-        enablement : true
+        PUBLISH_DIR : reports
