@@ -36,3 +36,4 @@ Add GitHub Action
 ## Test Report Option
 - Html (reports/html/)
 - Json (reports/json/)
+- Artefact (reports/)
