@@ -2,8 +2,6 @@
 This sample task for Automation Test login in DemoBlaze.com,
 Automation API Test in Gorest.co.in
 
-**Make sure before clone this repo use you own Gorest Token**
-
 ## Dependencies
 * **Selenium** version 4.18.1
 * **Cucumber** JUnit version 7.34.3
@@ -11,7 +9,6 @@ Automation API Test in Gorest.co.in
 * **JUnit** API version 6.0.3
 * **JUnit** Engine version 6.0.3
 * **Faker** Email Faker 1.0.2
-* **DOTENV** Dot env connector 3.0.0
 
 ## Test Explanation
 This test running with Cucumber with Gherkin format as scenario

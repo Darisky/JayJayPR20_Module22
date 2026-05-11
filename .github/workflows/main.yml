@@ -26,11 +26,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Execute Test
-        env:
-          TOKEN: ${{secrets.TOKEN}}
-        run: |
-          echo "TOKEN is set: $([[ -z \"$TOKEN\" ]] && echo 'NO' || echo 'YES')"
-          ./gradlew Cucumber
+        run: ./gradlew cucumber
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
