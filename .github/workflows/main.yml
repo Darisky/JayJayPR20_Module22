@@ -2,9 +2,9 @@ name: Automation Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       - name: Execute Test
         env:
           TOKEN: ${{ secrets.TOKEN }}
-        run: ./gradlew build
+        run: ./gradlew Cucumber
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
