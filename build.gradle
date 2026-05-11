@@ -20,6 +20,7 @@ dependencies {
     //JUnit
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.10.2'
 
     //JSON
     testImplementation 'org.json:json:20251224'

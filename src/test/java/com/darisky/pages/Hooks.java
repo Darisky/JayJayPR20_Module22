@@ -13,6 +13,8 @@ public class Hooks extends Base {
 
     @After("@web")
     public void afterTest(){
-        theDriver.quit();
+        if(theDriver != null){
+            theDriver.quit();
+        }
     }
 }
