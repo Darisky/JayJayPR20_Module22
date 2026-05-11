@@ -27,8 +27,8 @@ jobs:
 
       - name: Execute Test
         env:
-          TOKEN: ${{ secrets.TOKEN }}
-        run: ./gradlew Cucumber
+          TOKEN: ${{ env.TOKEN }}
+        run: ./gradlew cucumber
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

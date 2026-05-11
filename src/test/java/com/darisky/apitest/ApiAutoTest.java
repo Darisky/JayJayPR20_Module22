@@ -27,7 +27,7 @@ public class ApiAutoTest {
 
     public Response createNewUser(JSONObject payLoad) {
         return given().log().all()
-                .header("Authorization", "Bearer " + gorestToken)
+                .header("Authorization", "Bearer " + ApiAutoTest.gorestToken)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
                 .body(payLoad.toString())
@@ -36,7 +36,7 @@ public class ApiAutoTest {
 
     public Response getUserById(String userId){
         return given().log().all()
-                .header("Authorization", "Bearer " + gorestToken)
+                .header("Authorization", "Bearer " + ApiAutoTest.gorestToken)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
                 .when().get("users/" + userId);
@@ -44,7 +44,7 @@ public class ApiAutoTest {
 
     public Response updateUserName(String userId, JSONObject payLoad){
         return given().log().all()
-                .header("Authorization", "Bearer " + gorestToken)
+                .header("Authorization", "Bearer " + ApiAutoTest.gorestToken)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
                 .body(payLoad.toString())
@@ -53,7 +53,7 @@ public class ApiAutoTest {
 
     public Response deleteUser(String userId){
         return given().log().all()
-                .header("Authorization", "Bearer " + gorestToken)
+                .header("Authorization", "Bearer " + ApiAutoTest.gorestToken)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
                 .when().delete("users/" + userId);
