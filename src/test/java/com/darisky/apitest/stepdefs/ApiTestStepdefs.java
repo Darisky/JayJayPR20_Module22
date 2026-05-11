@@ -41,6 +41,8 @@ public class ApiTestStepdefs {
     public void theUserIsSuccessfullyCreatedAndAnIDIsReturned() {
         theResponse.then().assertThat().statusCode(201);
 
+        System.out.println("RESPONSE STATUS: " + theResponse.statusCode());
+        System.out.println("RESPONSE BODY: " + theResponse.getBody().asString());
         newUserId = theResponse.jsonPath().getString("id");
         System.out.println("<------SUCCESS: User created with ID: " + newUserId + "------>");
     }
