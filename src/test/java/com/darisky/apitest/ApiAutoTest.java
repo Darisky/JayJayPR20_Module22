@@ -16,10 +16,13 @@ public class ApiAutoTest {
         }
         return token;
     }
+
     public static final String gorestToken = getValidToken();
 
     public ApiAutoTest(){
         RestAssured.baseURI = "https://gorest.co.in/public/v2/";
+        System.out.println("DEBUG - Is the App ID completely null? " + (gorestToken == null));
+        System.out.println("DEBUG - Is the App ID empty? " + gorestToken.isEmpty());
     }
 
     public Response createNewUser(JSONObject payLoad) {
