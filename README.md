@@ -1,6 +1,8 @@
-# JayJay PR20 Module 22 : GitHub Action WebUI Automation Test
+# JayJay PR20 Module 22 : GitHub Action WebUI & API Automation Test
 This sample task for Automation Test login in DemoBlaze.com,
 Automation API Test in Gorest.co.in
+
+**Make sure before clone this repo use you own Gorest Token**
 
 ## Dependencies
 * **Selenium** version 4.18.1

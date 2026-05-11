@@ -26,6 +26,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Execute Test
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
         run: ./gradlew build
 
       - name: Upload Pages Artifact
