@@ -39,7 +39,7 @@ public class ApiTestStepdefs {
 
     @Then("the user is successfully created and an ID is returned")
     public void theUserIsSuccessfullyCreatedAndAnIDIsReturned() {
-        theResponse.then().log().all()
+        theResponse.then()
                 .assertThat().statusCode(201);
 
         newUserId = theResponse.jsonPath().getString("id");
