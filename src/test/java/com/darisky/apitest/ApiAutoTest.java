@@ -9,7 +9,15 @@ import static io.restassured.RestAssured.given;
 
 public class ApiAutoTest {
     public static final Dotenv dotEnv = Dotenv.configure().ignoreIfMissing().load();
-    public static final String gorestToken = dotEnv.get("TOKEN");
+    public static String getValidToken() {
+        String token = dotEnv.get("TOKEN");
+        if (token == null || token.trim().isEmpty()) {
+            token = System.getenv("TOKEN");
+        }
+        return token;
+    }
+    public static final String gorestToken = getValidToken();
+
     public ApiAutoTest(){
         RestAssured.baseURI = "https://gorest.co.in/public/v2/";
     }
