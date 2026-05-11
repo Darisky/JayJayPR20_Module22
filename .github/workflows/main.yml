@@ -27,7 +27,7 @@ jobs:
 
       - name: Execute Test
         env:
-          TOKEN: ${{ env.TOKEN }}
+          TOKEN: ${{secrets.TOKEN}}
         run: ./gradlew Cucumber
 
       - name: Upload Pages Artifact
