@@ -5,13 +5,13 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class Hooks extends Base {
-    @Before
+    @Before("@web")
     public void beforeTest(){
         getDriver();
         waiting();
     }
 
-    @After
+    @After("@web")
     public void afterTest(){
         theDriver.quit();
     }
