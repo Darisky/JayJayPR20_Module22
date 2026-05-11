@@ -26,14 +26,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Execute Test
-        env:
-<<<<<<< ApiTest
-          TOKEN: ${{ env.TOKEN }}
         run: ./gradlew cucumber
-=======
-          TOKEN: ${{secrets.TOKEN}}
-        run: ./gradlew Cucumber
->>>>>>> master
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
