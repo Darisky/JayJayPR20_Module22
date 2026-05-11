@@ -20,11 +20,24 @@ dependencies {
     //JUnit
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.3'
+
+    //JSON
+    testImplementation 'org.json:json:20251224'
+    testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
+
+    //REST Assured
+    testImplementation 'io.rest-assured:rest-assured:6.0.0'
+
+    //email generator
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+
+    //Dot env connection
+    testImplementation 'io.github.cdimascio:dotenv-java:3.0.0'
 }
 
-//test {
-//    useJUnitPlatform()
-//}
+test {
+    useJUnitPlatform()
+}
 
 configurations {
     cucumberRuntime {
