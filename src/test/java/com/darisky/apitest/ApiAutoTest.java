@@ -7,42 +7,38 @@ import org.json.JSONObject;
 import static io.restassured.RestAssured.given;
 
 public class ApiAutoTest {
-    private static final String TOKEN = "fe2c37a524da738117b22599f74b388b14a4be0859778f2ebdf6f03f52f2b318";
+    private static final String appId = "63a804408eb0cb069b57e43a";
     public ApiAutoTest(){
-        RestAssured.baseURI = "https://gorest.co.in/public/v2/";
+        RestAssured.baseURI = "https://dummyapi.io/data/v1/";
     }
 
     public Response createNewUser(JSONObject payLoad) {
         return given().log().all()
-                .header("Authorization", "Bearer " + ApiAutoTest.TOKEN)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
+                .header("app-id", appId)
                 .body(payLoad.toString())
-                .when().post("users");
+                .when().post("user/create");
     }
 
     public Response getUserById(String userId){
         return given().log().all()
-                .header("Authorization", "Bearer " + ApiAutoTest.TOKEN)
-                .header("Content-Type", "application/json")
-                .header("Accept", "application/json")
-                .when().get("users/" + userId);
+                .header("app-id", appId)
+                .when().get("user/" + userId);
     }
 
     public Response updateUserName(String userId, JSONObject payLoad){
         return given().log().all()
-                .header("Authorization", "Bearer " + ApiAutoTest.TOKEN)
                 .header("Content-Type", "application/json")
                 .header("Accept", "application/json")
+                .header("app-id", appId)
                 .body(payLoad.toString())
-                .when().put("users/" + userId);
+                .when().put("user/" + userId);
     }
 
     public Response deleteUser(String userId){
         return given().log().all()
-                .header("Authorization", "Bearer " + ApiAutoTest.TOKEN)
-                .header("Content-Type", "application/json")
-                .header("Accept", "application/json")
-                .when().delete("users/" + userId);
+                .header("app-id", appId)
+                .when().delete("user/" + userId);
     }
 }
