@@ -1,6 +1,6 @@
 # JayJay PR20 Module 22 : GitHub Action WebUI & API Automation Test
 This sample task for Automation Test login in DemoBlaze.com,
-Automation API Test in Gorest.co.in
+Automation API Test in Dummyapi.io
 
 ## Dependencies
 * **Selenium** version 4.18.1
